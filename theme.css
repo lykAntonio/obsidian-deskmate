@@ -238,7 +238,12 @@ body {
   --text-accent-hover: #8CB8F0;
   --text-on-accent: #0D1726;
   --text-selection: rgba(255, 199, 53, 0.30);
-  --text-highlight-bg: rgba(255, 199, 53, 0.55);
+  --text-highlight-bg: rgba(255, 199, 53, 0.24);
+  --dm-highlight-ink: #FFE7A0;
+  --link-color: #8AB9F3;
+  --link-color-hover: #B3D2FA;
+  --link-external-color: #8AB9F3;
+  --link-external-color-hover: #B3D2FA;
 
   --interactive-accent: var(--dm-blue);
   --interactive-accent-hover: #8CB8F0;
@@ -864,7 +869,7 @@ body.dm-h1-marker .cm-s-obsidian .HyperMD-header-1 .cm-header-1 {
   border-radius: 3px;
 }
 .theme-dark .markdown-rendered mark,
-.theme-dark .cm-s-obsidian span.cm-highlight { color: #0D1726; }
+.theme-dark .cm-s-obsidian span.cm-highlight { color: var(--dm-highlight-ink); }
 /* 链接 */
 .markdown-rendered a,
 .cm-s-obsidian .cm-link .cm-underline,
@@ -873,11 +878,16 @@ body.dm-h1-marker .cm-s-obsidian .HyperMD-header-1 .cm-header-1 {
 }
 .markdown-rendered a.internal-link,
 .cm-s-obsidian .cm-hmd-internal-link .cm-underline {
+  color: var(--link-color);
   text-decoration: none;
-  border-bottom: 1px dotted var(--dm-blue);
+  border-bottom: 1px dotted currentColor;
+}
+.markdown-rendered a.external-link {
+  color: var(--link-external-color);
 }
 .markdown-rendered a.internal-link:hover,
 .cm-s-obsidian .cm-hmd-internal-link:hover .cm-underline {
+  color: var(--link-color-hover);
   background-color: var(--dm-blue-bg);
   border-radius: 4px;
   border-bottom-color: transparent;
