@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Deskmate · 桌伴  v1.0.0  (by 轩言PM)
+   Deskmate · 桌伴  v1.0.1  (by 轩言PM)
    温暖 · 可爱 · 专业。给用过 Notion 的人一个回 Obsidian 的理由。
    品牌三色：蓝 #1E5BA8 (60%) · 橙 #FFC735 (30%) · 红 #E84A5F (10%)
    ========================================================================== */
@@ -604,20 +604,12 @@ body.dm-folder-mono .nav-folder:has(> .nav-folder-title:not([data-path*="/"])) {
   background: var(--dm-ink-5);
   border-color: var(--dm-ink-5);
 }
-.nav-folder:has(> .nav-folder-title[data-path^="99"]),
-.nav-folder:has(> .nav-folder-title[data-path^="archive" i]),
-.nav-folder:has(> .nav-folder-title[data-path*="归档"]) {
+.nav-folder-title[data-path^="99"],
+.nav-folder-title[data-path^="archive" i],
+.nav-folder-title[data-path*="归档"] {
   --dm-folder-color: var(--dm-ink-5);
-}
-.nav-folder:has(> .nav-folder-title[data-path^="99"]) > .nav-folder-title,
-.nav-folder:has(> .nav-folder-title[data-path^="archive" i]) > .nav-folder-title,
-.nav-folder:has(> .nav-folder-title[data-path*="归档"]) > .nav-folder-title {
   color: var(--dm-ink-4);
   font-weight: 400;
-}
-/* 展开中、且包含当前笔记的文件夹：名字变蓝 */
-.nav-folder:not(.is-collapsed):has(.nav-file-title.is-active) > .nav-folder-title .nav-folder-title-content {
-  color: var(--dm-blue);
 }
 /* 当前笔记：白色药丸 + 左侧橙条 + 蓝色加粗 */
 .nav-file-title.is-active {
@@ -877,19 +869,18 @@ body.dm-h1-marker .cm-s-obsidian .HyperMD-header-1 .cm-header-1 {
 .markdown-rendered a,
 .cm-s-obsidian .cm-link .cm-underline,
 .cm-s-obsidian .cm-url .cm-underline {
-  text-decoration-color: rgba(30, 91, 168, 0.35);
   text-underline-offset: 3px;
 }
 .markdown-rendered a.internal-link,
 .cm-s-obsidian .cm-hmd-internal-link .cm-underline {
-  text-decoration-style: dotted;
-  text-decoration-color: var(--dm-blue);
+  text-decoration: none;
+  border-bottom: 1px dotted var(--dm-blue);
 }
 .markdown-rendered a.internal-link:hover,
 .cm-s-obsidian .cm-hmd-internal-link:hover .cm-underline {
   background-color: var(--dm-blue-bg);
   border-radius: 4px;
-  text-decoration: none;
+  border-bottom-color: transparent;
 }
 /* 脚注 */
 .markdown-rendered sup.footnote-ref a,
@@ -994,7 +985,7 @@ body {
 /* 便利贴风格：所有 callout 都是一张贴纸（颜色跟 callout 类型走） */
 body.dm-sticky .callout,
 body.dm-sticky .markdown-source-view.mod-cm6 .cm-callout,
-body.dm-sticky .markdown-source-view.mod-cm6 .cm-embed-block:has(> .callout) { overflow: visible; }
+body.dm-sticky .markdown-source-view.mod-cm6 .cm-embed-block.cm-callout { overflow: visible; }
 body.dm-sticky .callout {
   position: relative;
   border-radius: 6px;
@@ -1305,7 +1296,7 @@ body.dm-motion.dm-desk-scene .empty-state-container::before {
    11. 兼容与补全
    -------------------------------------------------------------------------- */
 /* Iconize（icon-folder）给文件夹加了图标时，隐藏我们的方块，避免叠加 */
-.nav-folder-title:has(.iconize-icon) .nav-folder-title-content::before { display: none; }
+.nav-folder-title .iconize-icon ~ .nav-folder-title-content::before { display: none; }
 
 /* 阅读视图代码块：右上角语言标签（实时预览由 Obsidian 自带的 code-block-flair 显示） */
 .markdown-rendered pre[class*="language-"] { position: relative; }
