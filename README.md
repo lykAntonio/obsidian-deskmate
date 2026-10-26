@@ -20,9 +20,15 @@
 - **动一次就停的动效**：打开笔记时马克笔划过、便利贴贴上、点文件时橙条长出来；全部尊重系统"减弱动态效果"
 - **亮暗双模**：暗色是"夜间书房"，不是亮色反相
 
-![空白标签页](screenshots/empty-tab.png)
-![便利贴](screenshots/sticky-notes.png)
-![侧栏风格](screenshots/sidebar-styles.png)
+| 亮色 | 暗色 |
+|---|---|
+| ![亮色](screenshots/01-light.png) | ![暗色](screenshots/02-dark.png) |
+
+![空白标签页：书桌与台灯](screenshots/04-empty-tab.png)
+
+![五种侧栏风格](screenshots/03-sidebar-styles.png)
+
+> 以上截图均为示例库「小满的书桌」的虚构内容。
 
 ### 安装
 
@@ -85,6 +91,16 @@
 - **The empty tab is a desk**: a laptop, a lamp, a mug and a sticky note; the lamp light breathes every 7 seconds; at night the lamp is the only light source
 - **Motion that settles**: the marker draws itself when you open a note, stickies land, the orange bar grows when you select a file; all of it respects "reduce motion"
 - **Light and dark**: dark mode is a night study, not an inverted light mode
+
+| Light | Dark |
+|---|---|
+| ![Light](screenshots/01-light.png) | ![Dark](screenshots/02-dark.png) |
+
+![Empty tab: a desk and a lamp](screenshots/04-empty-tab.png)
+
+![Five sidebar styles](screenshots/03-sidebar-styles.png)
+
+> Screenshots use a fictional sample vault.
 
 ### Install
 
