@@ -1,7 +1,7 @@
 # Deskmate · 桌伴
 
-> 温暖、可爱、专业。给用过 Notion 的人一个回 Obsidian 的理由。
-> A warm, friendly Obsidian theme for people who miss Notion's polish. Sticky notes, index cards, a desk lamp, and a breathing desk.
+> 把 Obsidian 变成一张书桌：纸面、便利贴、索引卡和一盏台灯，每一种 Markdown 语法都有自己的样子。
+> Turn Obsidian into a desk: paper, sticky notes, index cards and a lamp, with a distinct look for every piece of Markdown.
 
 ![Deskmate screenshot](screenshot.png)
 
@@ -29,6 +29,26 @@
 ![五种侧栏风格](screenshots/03-sidebar-styles.png)
 
 > 以上截图均为示例库「小满的书桌」的虚构内容。
+
+### 每一种语法都有自己的样子
+
+**标题与行内元素**：H1 和笔记标题用宋体类衬线，底下压一条橙色马克笔；H2 前一个橙色小方块；H3 用品牌蓝；H4 到 H6 逐级变轻。行内代码是橙底，高亮是马克笔黄；内部链接是虚线下划线，未创建的笔记是灰色虚线；标签是蓝色胶囊；脚注是蓝色小数字。
+
+![标题与行内元素](screenshots/05-syntax-headings-inline.png)
+
+**列表与八种任务状态**：列表圆点和序号用品牌蓝，嵌套有细线引导。除了完成和未完成，还支持取消、重要、进行中、推迟、存疑、星标六种状态，每种一眼能分开。
+
+![列表与任务](screenshots/06-syntax-lists-tasks.png)
+
+**引用与 Callout 全是便利贴**：引用块是一张黄便签；每种 callout 按类型变成不同颜色的便签，顶上一条胶带、微微歪一点；`[!sticky]` 是主题专属的那张最歪最黄的。
+
+| 亮色 | 暗色 |
+|---|---|
+| ![便利贴 callout · 亮色](screenshots/07-syntax-callouts.png) | ![便利贴 callout · 暗色](screenshots/08-syntax-callouts-dark.png) |
+
+**属性、表格、代码块与分割线**：笔记属性是一张夹着回形针的索引卡；表格圆角描边、表头一条浅色带、首列加粗；代码块是墨蓝底，右上角标出语言；分割线中间一颗橙色小方块。
+
+![属性、表格与代码块](screenshots/09-syntax-code-table-properties.png)
 
 ### 安装
 
@@ -101,6 +121,26 @@
 ![Five sidebar styles](screenshots/03-sidebar-styles.png)
 
 > Screenshots use a fictional sample vault.
+
+### A distinct look for every piece of Markdown
+
+**Headings and inline elements**: H1 and the note title use a serif face with an orange marker; H2 gets a small orange square; H3 is brand blue; H4 to H6 step down quietly. Inline code sits on orange, highlights are marker yellow, internal links have a dotted underline, unresolved links are gray, tags are blue pills and footnotes are small blue numbers.
+
+![Headings and inline elements](screenshots/05-syntax-headings-inline.png)
+
+**Lists and eight task states**: bullets and numbers in brand blue with indentation guides. Besides done and open, tasks can be cancelled, important, in progress, deferred, questioned or starred, each easy to tell apart.
+
+![Lists and tasks](screenshots/06-syntax-lists-tasks.png)
+
+**Quotes and callouts are sticky notes**: blockquotes are yellow stickies; every callout becomes a sticky colored by type, with tape and a slight tilt; `[!sticky]` is the theme's own extra-yellow, extra-tilted one.
+
+| Light | Dark |
+|---|---|
+| ![Sticky-note callouts, light](screenshots/07-syntax-callouts.png) | ![Sticky-note callouts, dark](screenshots/08-syntax-callouts-dark.png) |
+
+**Properties, tables, code and dividers**: properties become an index card held by a paperclip; tables get rounded borders, a soft header band and a bold first column; code blocks sit on navy with a language label; dividers carry a small orange diamond.
+
+![Properties, tables and code](screenshots/09-syntax-code-table-properties.png)
 
 ### Install
 

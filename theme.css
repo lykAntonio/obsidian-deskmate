@@ -1,6 +1,6 @@
 /* ==========================================================================
-   Deskmate · 桌伴  v1.0.1  (by 轩言PM)
-   温暖 · 可爱 · 专业。给用过 Notion 的人一个回 Obsidian 的理由。
+   Deskmate · 桌伴  v1.0.2  (by 轩言PM)
+   把 Obsidian 变成一张书桌：纸面、便利贴、索引卡和一盏台灯。
    品牌三色：蓝 #1E5BA8 (60%) · 橙 #FFC735 (30%) · 红 #E84A5F (10%)
    ========================================================================== */
 
@@ -650,6 +650,7 @@ body.dm-paper-card .workspace-split.mod-root .workspace-leaf-content[data-type="
   background-color: var(--background-secondary);
 }
 body.dm-paper-card .workspace-split.mod-root .workspace-leaf-content[data-type="markdown"] > .view-content {
+  width: auto;
   margin: 4px 12px 12px;
   border-radius: var(--radius-l);
   border: 1px solid var(--dm-line);
@@ -925,7 +926,7 @@ input[data-task="x"]:checked,
 .task-list-item[data-task="x"] > input:checked { background-color: var(--dm-blue); border-color: var(--dm-blue); }
 input[data-task="-"], .task-list-item[data-task="-"] > input { background-color: var(--dm-cancel-bg); border-color: var(--dm-cancel-bg); background-image: none; }
 input[data-task="-"]::after, .task-list-item[data-task="-"] > input::after {
-  content: ""; position: absolute; left: 4px; right: 4px; top: 50%; height: 2px; margin-top: -1px;
+  content: ""; position: absolute; left: 4px; right: 4px; top: 50%; width: auto; height: 2px; margin-top: -1px;
   background: var(--dm-ink-4); border-radius: 2px; -webkit-mask: none; mask: none;
 }
 input[data-task="!"], .task-list-item[data-task="!"] > input { background-color: var(--dm-red); border-color: var(--dm-red); background-image: none; }
@@ -985,6 +986,8 @@ body {
 .callout-title { font-weight: 700; }
 .callout-icon { width: 20px; height: 20px; border-radius: 6px; background: rgb(var(--callout-color)); color: #fff; display: inline-flex; align-items: center; justify-content: center; }
 .callout-icon svg { width: 13px; height: 13px; stroke-width: 2.4px; }
+.callout-icon .svg-icon { color: #fff; }
+.callout-content > :last-child { margin-bottom: 0; }
 .callout[data-callout="note"], .callout[data-callout="info"], .callout[data-callout="todo"] { --callout-color: 30, 91, 168; }
 .callout[data-callout="tip"], .callout[data-callout="hint"], .callout[data-callout="success"], .callout[data-callout="check"], .callout[data-callout="done"] { --callout-color: 78, 154, 99; }
 .callout[data-callout="warning"], .callout[data-callout="caution"], .callout[data-callout="attention"] { --callout-color: 224, 168, 0; }
@@ -1123,6 +1126,7 @@ body.dm-sticky .popover.hover-popover::before {
 }
 .callout[data-callout="sticky"] .callout-title { color: var(--dm-orange-ink); }
 .callout[data-callout="sticky"] .callout-icon { background: var(--dm-orange); color: var(--dm-orange-ink); }
+.callout[data-callout="sticky"] .callout-icon .svg-icon { color: var(--dm-orange-ink); }
 .theme-dark .callout[data-callout="sticky"] { background-color: rgba(255, 199, 53, 0.16); box-shadow: none; }
 
 /* 表格 */
@@ -1134,7 +1138,7 @@ body.dm-sticky .popover.hover-popover::before {
 
 /* 分割线：中间一颗橙色小方块 */
 .markdown-rendered hr,
-.cm-s-obsidian .HyperMD-hr { position: relative; }
+.cm-s-obsidian .HyperMD-hr { position: relative; overflow: visible; }
 .markdown-rendered hr::after {
   content: "";
   position: absolute;
