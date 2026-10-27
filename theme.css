@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Deskmate · 桌伴  v1.0.2  (by 轩言PM)
+   Deskmate · 桌伴  v1.0.3  (by 轩言PM)
    把 Obsidian 变成一张书桌：纸面、便利贴、索引卡和一盏台灯。
    品牌三色：蓝 #1E5BA8 (60%) · 橙 #FFC735 (30%) · 红 #E84A5F (10%)
    ========================================================================== */
@@ -601,7 +601,8 @@ body {
 .nav-folder:has(> .nav-folder-title:not([data-path*="/"])):nth-child(6n+4 of .nav-folder) { --dm-folder-color: var(--dm-folder-4); }
 .nav-folder:has(> .nav-folder-title:not([data-path*="/"])):nth-child(6n+5 of .nav-folder) { --dm-folder-color: var(--dm-folder-5); }
 .nav-folder:has(> .nav-folder-title:not([data-path*="/"])):nth-child(6n+6 of .nav-folder) { --dm-folder-color: var(--dm-folder-6); }
-body.dm-folder-mono .nav-folder:has(> .nav-folder-title:not([data-path*="/"])) { --dm-folder-color: var(--dm-blue); }
+/* 加上 :nth-child(n of .nav-folder) 抬高优先级，盖过上面的六色循环 */
+body.dm-folder-mono .nav-folder:has(> .nav-folder-title:not([data-path*="/"])):nth-child(n of .nav-folder) { --dm-folder-color: var(--dm-blue); }
 /* 归档类文件夹固定灰（直接写在方块上，优先级高于六色循环） */
 .nav-folder-title[data-path^="99"] .nav-folder-title-content::before,
 .nav-folder-title[data-path^="archive" i] .nav-folder-title-content::before,
